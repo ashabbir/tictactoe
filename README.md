@@ -10,4 +10,4 @@ with a UI
 in just a text editor
 
 
-* ~~40 mins and in MacVIM~~
+_40 mins and in MacVIM__

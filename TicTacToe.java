@@ -3,11 +3,15 @@ import javax.swing.*;
 import java.awt.event.*;
 import java.util.ArrayList;
 
+
+//game object
 public class TicTacToe extends JFrame {
 	private static int turn;
 	private JLabel status;
 	ArrayList<GameButton> btns = new ArrayList<GameButton>();
 	
+	
+	//CTOR tat sets up the thingie
 	public TicTacToe(){
 		turn = 1;
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -66,6 +70,7 @@ public class TicTacToe extends JFrame {
 	}
 	
 	
+	//this could be beter
 	public boolean makeDecision(String currentPlayer){
 		
 		for (GameButton b : btns) {
@@ -152,7 +157,6 @@ public class TicTacToe extends JFrame {
 	
 	
 	public void setEnabledAll(boolean status) {
-
 		for(GameButton btn : btns) {
 			if(status) {
 				btn.setEnabled(true);
@@ -170,6 +174,7 @@ public class TicTacToe extends JFrame {
 	}
 	
 	
+	//entry point
 	public static void main(String[]args) {
 		
 		EventQueue.invokeLater(new Runnable() {
@@ -184,7 +189,7 @@ public class TicTacToe extends JFrame {
 }
 
 
-
+//a simple button class
 class GameButton extends JButton {
 	private int id ;
 	private boolean isSelected;
